@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -18,8 +21,10 @@ module.exports = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "7hq0l7d8",
-        dataset: "production",
+        projectId: process.env.SANITY_PROJECT_ID,
+        dataset: process.env.SANITY_DATASET,
+        watchMode: true,
+        overlayDrafts: true,
       },
     },
     {
