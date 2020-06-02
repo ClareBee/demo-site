@@ -102,3 +102,32 @@ package = "netlify-plugin-gatsby-cache"
 - add to Gatsby: `yarn add -D netlify-plugin-cypress` & update the netlify.toml
 
 > How does it work? When Netlify Build runs, it "knows" the output folder name and calls the netlify-plugin-cypress after the build has finished with that folder. Then the plugin runs Cypress tests using its NPM module API. If the tests pass, the plugin finishes and the Netlify deploy starts.
+
+- e.g. https://github.com/netlify-labs/netlify-plugin-a11y
+- `yarn add netlify-plugin-a11y`
+
+```toml
+[[plugins]]
+package = "netlify-plugin-a11y"
+
+  # all inputs are optional, we just show you the defaults below
+  [plugins.inputs]
+
+  # required config
+  checkPaths = ['/'] # you can give an array of directories or paths to html files, that you want to run a11y checks on
+
+  ## Another checkPaths Example
+  checkPaths = [
+    '/blog',
+    '/about.html',
+    '/super/specific/route/index.html',
+  ]
+
+  # # optional config
+  # ignoreDirectories = ['/admin']  # explicitly ignore these directories
+
+  # resultMode = "warn" # is "error" by default
+
+  # # Developer only
+  # debugMode = true # extra logging for plugin developers
+```

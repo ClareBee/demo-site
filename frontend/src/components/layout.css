@@ -620,3 +620,25 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.movie-list {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.movie-item {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  padding: 1rem;
+}
+
+.movie-item h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
