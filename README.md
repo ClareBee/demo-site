@@ -97,3 +97,8 @@ package = "netlify-plugin-gatsby-cache"
 - Now any changes to your source data (here in Sanity) will trigger a build where Gatsby will only rebuild affected pages! => Incremental Builds!
 
   ![netlify build](/assets/netlifyincrementalbuild.jpg)
+
+- e.g. Cypress Netlify Plugin: https://github.com/cypress-io/netlify-plugin-cypress#readme
+- add to Gatsby: `yarn add -D netlify-plugin-cypress` & update the netlify.toml
+
+> How does it work? When Netlify Build runs, it "knows" the output folder name and calls the netlify-plugin-cypress after the build has finished with that folder. Then the plugin runs Cypress tests using its NPM module API. If the tests pass, the plugin finishes and the Netlify deploy starts.
