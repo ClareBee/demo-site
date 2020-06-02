@@ -33,6 +33,7 @@
 
 - use `dotenv` with .env.development & .env.production to avoid referencing directly in repo
 - `sanity start` launches Sanity locally on `http://localhost:3333`
+- changes here are saved in the cloud on publish (Sanity's Content API)
 
   ![sanity dashboard](/assets/sanity-dashboard.jpg)
 
