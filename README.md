@@ -35,7 +35,7 @@
 - `sanity start` launches Sanity locally on `http://localhost:3333`
 
   ![sanity dashboard](/assets/sanity-dashboard.jpg)
-  
+
 ---
 
 ### Troubleshooting
@@ -46,7 +46,10 @@
 
 ### Cypress
 
+- good guide for Gatsby https://www.gatsbyjs.org/docs/end-to-end-testing/
+- https://docs.cypress.io/guides/overview/why-cypress.html
 - `yarn add -D cypress start-server-and-test`
+- https://github.com/bahmutov/start-server-and-test - Starts server, waits for URL, then runs test command; when the tests end, shuts down server
 - `cypress.json`:
 
 ```json
@@ -71,7 +74,6 @@
 
 - add netlify.toml file at root level and point it to the gatsby build output:
 
-
 ```
 [build]
 base = "frontend/"
@@ -84,14 +86,14 @@ package = "netlify-plugin-gatsby-cache"
 
 - note the including of the cache:
 
-  >Incremental builds rely on Gatsby’s cache, so we need to enable netlify-plugin-gatsby-cache, which will persist Gatsby’s public and .cache directories between builds. (https://www.netlify.com/blog/2020/04/23/enable-gatsby-incremental-builds-on-netlify/)
+  > Incremental builds rely on Gatsby’s cache, so we need to enable netlify-plugin-gatsby-cache, which will persist Gatsby’s public and .cache directories between builds. (https://www.netlify.com/blog/2020/04/23/enable-gatsby-incremental-builds-on-netlify/)
 
 - deploy Gatsby site to Netlify using GitHub (master branch default) - remembering to change the publish directory to the frontend/public one rather than the default public
 - adjust build script: `"build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages"`
 
 - add Plugins: https://docs.netlify.com/configure-builds/build-plugins/
   ![netlify plugins](/assets/plugin-directory.jpg)
-  
+
 - Now any changes to your source data (here in Sanity) will trigger a build where Gatsby will only rebuild affected pages! => Incremental Builds!
 
   ![netlify build](/assets/netlifyincrementalbuild.jpg)
