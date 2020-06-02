@@ -65,6 +65,8 @@
 
 - `npm run test:e2e` launches Cypress w Chrome
 
+---
+
 ## Netlify Build with Plugins
 
 - add netlify.toml file at root level and point it to the gatsby build output:
