@@ -1,5 +1,7 @@
 ## Gatsby and Netlify Build Plugins POC
 
+---
+
 ### Setup
 
 - set up parent repo
@@ -14,6 +16,7 @@
 - deploy Sanity GraphQL API: `sanity graphql deploy`
 - this will be available on `https://<YOUR_ID>.api.sanity.io/v1/graphql/<YOUR_DATASET>`
 - this also makes a GraphQL playground available this endpoint
+
   ![sanity playground]('/assets/../../assets/sanity-graphql-playground.jpg)
 
 - adjust your gatsby config file to reference the correct id and dataset (e.g. production)
@@ -30,11 +33,16 @@
 
 - use `dotenv` with .env.development & .env.production to avoid referencing directly in repo
 - `sanity start` launches Sanity locally on `http://localhost:3333`
+
   ![sanity dashboard](/assets/sanity-dashboard.jpg)
+  
+---
 
 ### Troubleshooting
 
 - 'React hooks' error results if versions are not in sync. Best to delete node_modules and use `yarn`
+
+---
 
 ### Cypress
 
@@ -49,19 +57,20 @@
 
 - test scripts:
 
-````json
+```json
   "cy:run": "cypress run",
   "cy:open": "cypress open",
   "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
 ```
+
 - `npm run test:e2e` launches Cypress w Chrome
 
 ## Netlify Build with Plugins
 
 - add netlify.toml file at root level and point it to the gatsby build output:
 
-````
 
+```
 [build]
 base = "frontend/"
 command = "npm run build"
@@ -77,9 +86,10 @@ package = "netlify-plugin-gatsby-cache"
 
 - deploy Gatsby site to Netlify using GitHub (master branch default) - remembering to change the publish directory to the frontend/public one rather than the default public
 - adjust build script: `"build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages"`
-```
 
 - add Plugins: https://docs.netlify.com/configure-builds/build-plugins/
   ![netlify plugins](/assets/plugin-directory.jpg)
+  
 - Now any changes to your source data (here in Sanity) will trigger a build where Gatsby will only rebuild affected pages! => Incremental Builds!
+
   ![netlify build](/assets/netlifyincrementalbuild.jpg)
