@@ -14,8 +14,8 @@ package = "netlify-plugin-a11y"
   [plugins.inputs]
   
   # required config
-  checkPaths = ['/frontend/src/components', '/frontend/src/pages]
-  
+  checkPaths = ['/frontend/src/components', '/frontend/src/pages']
+
   # # optional config
   # ignoreDirectories = ['/admin']  # explicitly ignore these directories
 

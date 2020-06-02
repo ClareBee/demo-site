@@ -132,3 +132,12 @@ package = "netlify-plugin-a11y"
   # # Developer only
   # debugMode = true # extra logging for plugin developers
 ```
+
+### Troubleshooting
+
+- Test the Netlify build process locally:
+- Ensure that you have the netlify build command available (in future this will be provided via the CLI)
+  `npm install @netlify/build -g`
+
+- In the project working directory, run the build as netlify would with the build bot
+  `netlify-build`
