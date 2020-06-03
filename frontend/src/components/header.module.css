@@ -1,14 +1,45 @@
 .header {
   margin-bottom: 1.45rem;
-  background: #cdcdcd;
+  background: #acb2c3;
+  border-bottom: 4px solid #ff0022;
+  display: flex;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
 }
 
-.header a {
-  color: black;
+.header h1 a {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 3px 1px #ff0022, 5px 2px 2px #2a2a72;
+  letter-spacing: 1.2px;
+}
+
+.description {
+  color: #2a2a72;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  margin-bottom: 2rem;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  margin: 0 2rem;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.header img {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  flex-shrink: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+  }
+  .header img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
 }

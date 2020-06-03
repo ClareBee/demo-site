@@ -1,10 +1,10 @@
 .list {
   list-style: none;
+  margin: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 }
-
 .item {
   margin: 1rem;
   display: flex;
@@ -14,31 +14,68 @@
   width: 40%;
   max-width: 500px;
   padding: 2rem 1rem 1.5rem 1rem;
-  background: #cdcdcd;
+  background: #acb2c3;
   border-radius: 5px;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
 }
+
 .container {
   width: 100%;
 }
 
 .image {
   border-radius: 5px;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
 }
 
 .heading {
+  display: inline-block;
+  width: 100%;
   text-align: center;
   min-height: 120px;
+}
+
+.titlebar {
+  display: table;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.75rem 0 0.5rem 0;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #ff0022;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
 }
 
 .h2 {
   font-size: 1.5rem;
 }
 
-.description {
-  padding: 1rem 0.5rem;
+.year {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-shadow: 3px 1px #ff0022, 5px 2px 2px #2a2a72;
 }
 
-@media only screen and (max-width: 480px) {
+.description {
+  margin-top: 1rem;
+  padding: 1rem 1rem 1.5rem 1rem;
+  background: #f5f0f6;
+  border-radius: 5px;
+  flex: grow;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+}
+
+.description::first-letter {
+  color: #ff0022;
+  font-family: Rubik, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+}
+
+@media only screen and (max-width: 750px) {
   .item {
     width: 100%;
   }

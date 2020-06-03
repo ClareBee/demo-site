@@ -2,14 +2,12 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-p {
-  font-family: Roboto, sans-serif;
-}
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f5f0f6;
 }
 article,
 aside,
@@ -617,17 +615,21 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
 h1,
 h2,
 h3,
 h4,
 h5 {
   font-family: Rubik, sans-serif;
+  color: #2a2a72;
+}
+p {
+  font-family: Roboto, sans-serif;
+  color: #1d1e2c;
+}
+p,
+a {
+  color: #1d1e2c;
 }
 .container {
   margin: 0 auto;
@@ -643,4 +645,30 @@ h5 {
 
 .container footer {
   padding: 1rem;
+  border-top: 3px solid #ff0022;
+  background: #2a2a72;
+  color: #fff;
+}
+
+.container footer a {
+  color: #fff;
+  margin-left: 5px;
+}
+
+.container footer a,
+.container footer {
+  font-family: Rubik, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-size: 0.75rem;
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+
+  .container main {
+    padding: 0rem;
+  }
 }

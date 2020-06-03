@@ -10,9 +10,10 @@ const Header = ({ siteTitle, description }) => (
       <h1>
         <Link to="/">{siteTitle}</Link>
       </h1>
-      <p>{description}</p>
+      <p className={styles.description}>{description}</p>
       <Nav />
     </div>
+    <img alt="planet" src={require("../images/space.svg")} width="200px" />
   </header>
 )
 

@@ -10,8 +10,12 @@ const MovieList = ({ data }) => {
         {data.allSanityMovie.edges.map(({ node }) => (
           <li key={node.title} className={styles.item}>
             <div className={styles.heading}>
-              <h2 className={styles.h2}>{node.title}</h2>
-              <p>{new Date(node.releaseDate).getFullYear()}</p>
+              <div className={styles.titlebar}>
+                <h2 className={styles.h2}>{node.title}</h2>
+              </div>
+              <p className={styles.year}>
+                {new Date(node.releaseDate).getFullYear()}
+              </p>
             </div>
             <div className={styles.container}>
               <Img

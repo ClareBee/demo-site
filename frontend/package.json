@@ -18,7 +18,9 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "typeface-roboto": "^0.0.75",
+    "typeface-rubik": "^0.0.72"
   },
   "devDependencies": {
     "cypress": "^4.7.0",

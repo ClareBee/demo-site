@@ -1,16 +1,28 @@
-.active {
-  color: red;
-  background: blue;
-}
-
 .nav ul {
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
   padding: 0;
   margin: 0;
+  font-family: Rubik, sans-serif;
+  font-weight: bold;
 }
 
-.nav li {
+.nav li a {
   margin-right: 2rem;
+  color: #2a2a72;
+  text-decoration: none;
+  border: 1px solid #f5f0f6;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav li a.active {
+  color: #ff0022;
+}
+
+.nav li a:hover {
+  background: #5e6882;
+  color: #fff;
 }
