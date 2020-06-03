@@ -1,5 +1,8 @@
 ## Gatsby, Sanity.io and Netlify Build Plugins POC
 
+https://demo-site-for-build-plugins.netlify.app/
+or run locally with `npm run dev` on `localhost:8000`
+
 Building a simple Gatsby app against a **Sanity.io GraphQL API**, with **Netlify** incremental builds & plugins for **Cypress** & **A11y**.
 
 <p align="center">
