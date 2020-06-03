@@ -18,29 +18,28 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <div className="container">
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        description={data.site.siteMetadata.description}
+      />
+      <main>{children}</main>
+      <footer>
+        © {new Date().getFullYear()}, Built by{" "}
+        <a href="https://clarebee.com">ClareBee</a> with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>,
+        <a href="https://www.sanity.io/">Sanity.io</a>, and hosted on
+        <a href="https://www.netlify.com">Netlify</a>,
+      </footer>
+    </div>
   )
 }
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import MovieList from "../components/movie-list"
@@ -11,7 +11,6 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <MovieList data={data} />
-      <Link to="/page-2/">Go to page 2</Link> <br />
     </Layout>
   )
 }
@@ -22,6 +21,7 @@ export const query = graphql`
       edges {
         node {
           title
+          releaseDate
           poster {
             asset {
               fluid(maxWidth: 700) {

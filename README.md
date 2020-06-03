@@ -1,8 +1,10 @@
-## Gatsby and Netlify Build Plugins POC
+## Gatsby, Sanity.io and Netlify Build Plugins POC
+
+Building a simple Gatsby app against a Sanity.io GraphQL API, with Netlify plugins for Cypress and A11y.
 
 ---
 
-### Setup
+### Setup - Gatsby and Sanity.io
 
 - set up parent repo
 - ensure you've got up-to-date Gatsby CLI `npm install -g gatsby-cli`
@@ -13,7 +15,7 @@
 - initialise new Sanity project: `sanity init` => gives you config options on the command line, including choice of dummy data
 - to delete the imported data, use `sanity dataset delete production`
 - create a new clean dataset with `sanity dataset create <name>`
-- deploy Sanity GraphQL API: `sanity graphql deploy`
+- deploy Sanity GraphQL API: `sanity graphql deploy` (https://www.sanity.io/docs/graphql)
 - this will be available on `https://<YOUR_ID>.api.sanity.io/v1/graphql/<YOUR_DATASET>`
 - this also makes a GraphQL playground available this endpoint
 

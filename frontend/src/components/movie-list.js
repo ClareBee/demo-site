@@ -1,23 +1,21 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import styles from "./movie-list.module.css"
+import Img from "gatsby-image"
 
 const MovieList = ({ data }) => {
   console.log("list", data.allSanityMovie)
   return (
-    <article
-      style={{
-        marginBottom: `1.45rem`,
-      }}
-    >
-      <ul className="movie-list">
+    <article>
+      <ul className={styles.list}>
         {data.allSanityMovie.edges.map(edge => (
-          <li key={edge.key} className="movie-item">
-            <h2>{edge.node.title}</h2>
-            <img
-              src={edge.node.poster.asset.fluid.srcWebp}
+          <li key={edge.node.title} className={styles.item}>
+            <h2 className={styles.heading}>{edge.node.title}</h2>
+            <p>{new Date(edge.node.releaseDate).getFullYear()}</p>
+            <Img
+              fluid={edge.node.poster.asset.fluid}
               alt={edge.node.title}
-              width="200"
+              className={styles.image}
+              // backgroundColor="true"
             />
           </li>
         ))}
