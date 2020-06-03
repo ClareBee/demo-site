@@ -22,6 +22,7 @@ export const query = graphql`
         node {
           title
           releaseDate
+          _rawOverview
           poster {
             asset {
               fluid(maxWidth: 700) {
