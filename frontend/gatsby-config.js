@@ -1,10 +1,11 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+
 module.exports = {
   siteMetadata: {
     title: `SciFi`,
-    description: `Gatsby Frontend, Sanity.io GraphQL API, Netlify Build plugins for Cypress and A11y.`,
+    description: `Demo app with Gatsby Frontend, Sanity.io GraphQL API, Netlify Build plugins for Cypress & A11y.`,
     author: `@clarie_bee`,
   },
   plugins: [

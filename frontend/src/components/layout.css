@@ -1,8 +1,11 @@
 html {
-  font-family: "Gill Sans", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+p {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -200,7 +203,6 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -620,7 +622,13 @@ pre tt:after {
     font-size: 100%;
   }
 }
-
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Rubik, sans-serif;
+}
 .container {
   margin: 0 auto;
   display: flex;
