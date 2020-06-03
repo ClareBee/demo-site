@@ -8,23 +8,34 @@
 .item {
   margin: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   width: 40%;
   max-width: 500px;
-  padding: 1rem;
+  padding: 2rem 1rem 1.5rem 1rem;
   background: #cdcdcd;
+  border-radius: 5px;
+}
+.container {
+  width: 100%;
 }
 
 .image {
-  width: 300px;
   border-radius: 5px;
 }
 
 .heading {
-  font-size: 1.5rem;
   text-align: center;
+  min-height: 120px;
+}
+
+.h2 {
+  font-size: 1.5rem;
+}
+
+.description {
+  padding: 1rem 0.5rem;
 }
 
 @media only screen and (max-width: 480px) {

@@ -7,16 +7,22 @@ const MovieList = ({ data }) => {
   return (
     <article>
       <ul className={styles.list}>
-        {data.allSanityMovie.edges.map(edge => (
-          <li key={edge.node.title} className={styles.item}>
-            <h2 className={styles.heading}>{edge.node.title}</h2>
-            <p>{new Date(edge.node.releaseDate).getFullYear()}</p>
-            <Img
-              fluid={edge.node.poster.asset.fluid}
-              alt={edge.node.title}
-              className={styles.image}
-              // backgroundColor="true"
-            />
+        {data.allSanityMovie.edges.map(({ node }) => (
+          <li key={node.title} className={styles.item}>
+            <div className={styles.heading}>
+              <h2 className={styles.h2}>{node.title}</h2>
+              <p>{new Date(node.releaseDate).getFullYear()}</p>
+            </div>
+            <div className={styles.container}>
+              <Img
+                fluid={node.poster.asset.fluid}
+                alt={node.title}
+                className={styles.image}
+              />
+            </div>
+            <p className={styles.description}>
+              {node._rawOverview[0].children[0].text}
+            </p>
           </li>
         ))}
       </ul>

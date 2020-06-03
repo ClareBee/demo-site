@@ -3,7 +3,7 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `Gatsby, Sanity.io & Netlify Build Plugins`,
+    title: `SciFi`,
     description: `Gatsby Frontend, Sanity.io GraphQL API, Netlify Build plugins for Cypress and A11y.`,
     author: `@clarie_bee`,
   },
