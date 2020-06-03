@@ -1,9 +1,13 @@
 ## Gatsby, Sanity.io and Netlify Build Plugins POC
 
-Building a simple Gatsby app against a Sanity.io GraphQL API, with Netlify plugins for Cypress and A11y.
+Building a simple Gatsby app against a **Sanity.io GraphQL API**, with **Netlify** incremental builds & plugins for **Cypress** & **A11y**.
 
-![home page]('/assets/home.jpg)
-![about page]('/assets/about.jpg)
+<p align="center">
+<img src="/assets/home.jpg" alt="home" width="330px" />
+
+<img src="/assets/about.jpg" alt="about" width="330px" />
+</p>
+                                               
 
 ### Additional Features
 
@@ -15,19 +19,19 @@ Building a simple Gatsby app against a Sanity.io GraphQL API, with Netlify plugi
 ### Setup - Gatsby and Sanity.io
 
 - set up parent repo
-- ensure you've got up-to-date Gatsby CLI `npm install -g gatsby-cli`
-- use latest version of Gatsby: `yarn add gatsby@latest` & create new Gatsby project `gatsby new frontend`. Cd into it & run `gatsby develop` to test it's working ok.
-- launches Gatsby app on http://localhost:8000 & GraphQL playground on http://localhost:8000/___graphql
-- add Sanity.io support: `yarn add gatsby-source-sanity`
-- global install of Sanity CLI & login: `npm i -g @sanity/cli && sanity login`
-- initialise new Sanity project: `sanity init` => gives you config options on the command line, including choice of dummy data
+- ensure you've got up-to-date **Gatsby CLI** `npm install -g gatsby-cli`
+- use latest version of **Gatsby**: `yarn add gatsby@latest` & create new **Gatsby** project `gatsby new frontend`. Cd into it & run `gatsby develop` to test it's working ok.
+- launches **Gatsby** app on http://localhost:8000 & **GraphQL** playground on http://localhost:8000/___graphql
+- add **Sanity.io** support: `yarn add gatsby-source-sanity`
+- global install of **Sanity CLI** & login: `npm i -g @sanity/cli && sanity login`
+- initialise new **Sanity** project: `sanity init` => gives you config options on the command line, including choice of dummy data
 - to delete the imported data, use `sanity dataset delete production`
 - create a new clean dataset with `sanity dataset create <name>`
-- deploy Sanity GraphQL API: `sanity graphql deploy` (https://www.sanity.io/docs/graphql)
+- deploy **Sanity GraphQL API**: `sanity graphql deploy` (https://www.sanity.io/docs/graphql)
 - this will be available on `https://<YOUR_ID>.api.sanity.io/v1/graphql/<YOUR_DATASET>`
-- this also makes a GraphQL playground available this endpoint
+- this also makes a **GraphQL** playground available this endpoint
 
-  ![sanity playground]('/assets/sanity-graphql-playground.jpg)
+  ![sanity playground](/assets/sanity-graphql-playground.jpg)
 
 - adjust your gatsby config file to reference the correct id and dataset (e.g. production)
 
@@ -43,7 +47,7 @@ Building a simple Gatsby app against a Sanity.io GraphQL API, with Netlify plugi
 
 - use `dotenv` with .env.development & .env.production to avoid referencing directly in repo
 - `sanity start` launches Sanity locally on `http://localhost:3333`
-- changes here are saved in the cloud on publish (Sanity's Content API)
+- changes here are saved in the cloud on publish (**Sanity's Content API**)
 
   ![sanity dashboard](/assets/sanity-dashboard.jpg)
 
