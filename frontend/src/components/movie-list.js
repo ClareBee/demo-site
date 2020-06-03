@@ -4,7 +4,6 @@ import MovieItem from "./movie-item"
 
 const MovieList = ({ data }) => {
   const sortByTitle = movies => {
-    console.log(movies)
     const sorted = movies.sort((a, b) =>
       a.node.title.localeCompare(b.node.title)
     )
