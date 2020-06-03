@@ -2,6 +2,14 @@
 
 Building a simple Gatsby app against a Sanity.io GraphQL API, with Netlify plugins for Cypress and A11y.
 
+![home page]('/assets/home.jpg)
+![about page]('/assets/about.jpg)
+
+### Additional Features
+
+- CSS Modules
+- Typefaces for locally hosted fonts (https://github.com/KyleAMathews/typefaces)
+
 ---
 
 ### Setup - Gatsby and Sanity.io
@@ -19,7 +27,7 @@ Building a simple Gatsby app against a Sanity.io GraphQL API, with Netlify plugi
 - this will be available on `https://<YOUR_ID>.api.sanity.io/v1/graphql/<YOUR_DATASET>`
 - this also makes a GraphQL playground available this endpoint
 
-  ![sanity playground]('/assets/../../assets/sanity-graphql-playground.jpg)
+  ![sanity playground]('/assets/sanity-graphql-playground.jpg)
 
 - adjust your gatsby config file to reference the correct id and dataset (e.g. production)
 
