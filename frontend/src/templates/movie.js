@@ -57,7 +57,7 @@ const Movie = data => {
       <h3>{new Date(releaseDate).getFullYear()}</h3>
       <div className={styles.moviecontainer}>
         <div className={styles.description}>
-          <h4>Summary</h4>
+          <h2>Summary</h2>
           <p>{description[0].children[0].text}</p>
           <ul className={styles.crew}>
             {crewMembers.map(member => (

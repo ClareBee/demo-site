@@ -11,6 +11,10 @@ Building a simple Gatsby app against a **Sanity.io GraphQL API**, with **Netlify
 <img src="/assets/about.jpg" alt="about" width="330px" />
 </p>
 
+<img src="/assets/show1.jpg" alt="show page" width="330px" />
+
+<img src="/assets/show2.jpg" alt="show page" width="330px" />
+
 ### Additional Features
 
 - CSS Modules

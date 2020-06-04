@@ -26,6 +26,14 @@
   line-height: 1.5;
 }
 
+.description p::first-letter {
+  color: #ff0022;
+  font-family: Rubik, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+}
+
 .crew {
   list-style: none;
   font-family: Rubik, sans-serif;
