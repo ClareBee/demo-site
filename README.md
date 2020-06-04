@@ -10,7 +10,6 @@ Building a simple Gatsby app against a **Sanity.io GraphQL API**, with **Netlify
 
 <img src="/assets/about.jpg" alt="about" width="330px" />
 </p>
-                                               
 
 ### Additional Features
 
@@ -37,6 +36,7 @@ Building a simple Gatsby app against a **Sanity.io GraphQL API**, with **Netlify
   ![sanity playground](/assets/sanity-graphql-playground.jpg)
 
 - adjust your gatsby config file to reference the correct id and dataset (e.g. production)
+- watchMode will update Gatsby automatically in development
 
 ```javascript
     {
@@ -44,6 +44,7 @@ Building a simple Gatsby app against a **Sanity.io GraphQL API**, with **Netlify
       options: {
         projectId: process.env.SANITY_PROJECT_ID,
         dataset: process.env.SANITY_DATASET,
+        watchMode: true,
       },
     },
 ```
@@ -158,3 +159,14 @@ package = "netlify-plugin-a11y"
 
 - In the project working directory, run the build as netlify would with the build bot
   `netlify-build`
+
+### Webhooks
+
+- For production, for Gatsby to pick up changes in the Sanity dataset, add a webhook to trigger a new build
+- In Netlify, add a webhook in the Build & Deploy section & copy the url
+- On the command line, run `sanity hook create` pointing to this unique url
+- Now any published changes on localhost:3333 will trigger a build!
+
+![netlify webhooks](/assets/netlify-webhook.jpg)
+![sanity webhooks](/assets/sanityCLI.jpg)
+![netlify build](/assets/triggered-build.jpg)
