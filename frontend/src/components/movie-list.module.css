@@ -5,15 +5,15 @@
   flex-flow: row wrap;
   justify-content: space-around;
 }
+
 .item {
   margin: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 40%;
-  max-width: 500px;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  width: 45%;
+  padding: 1.5rem;
   background: #acb2c3;
   border-radius: 5px;
   box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
@@ -21,11 +21,15 @@
 
 .container {
   width: 100%;
+  display: flex;
 }
 
 .image {
+  width: 45%;
+  min-width: 200px;
   border-radius: 5px;
   box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+  margin-right: 1.5rem;
 }
 
 .heading {
@@ -60,20 +64,43 @@
 }
 
 .description {
-  margin-top: 1rem;
-  padding: 1rem 1rem 1.5rem 1rem;
+  padding: 1rem;
   background: #f5f0f6;
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
-  flex: grow;
   box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: justify;
 }
 
-.description::first-letter {
+.text {
+  hyphens: auto;
+}
+
+.text::first-letter {
   color: #ff0022;
   font-family: Rubik, sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 1.1px;
+}
+
+.castMembers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 1rem;
+  border-top: 3px solid #2a2a72;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+}
+
+.cast {
+  width: 60px;
+  border-radius: 3px;
+  margin: 0.25rem;
 }
 
 @media only screen and (max-width: 750px) {

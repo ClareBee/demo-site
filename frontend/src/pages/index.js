@@ -6,6 +6,7 @@ import MovieList from "../components/movie-list"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => {
+  console.log(data)
   return (
     <Layout>
       <SEO title="Home" />
@@ -24,8 +25,20 @@ export const query = graphql`
           _rawOverview
           poster {
             asset {
-              fluid(maxWidth: 700) {
+              fluid(maxWidth: 400) {
                 ...GatsbySanityImageFluid
+              }
+            }
+          }
+          castMembers {
+            person {
+              name
+              image {
+                asset {
+                  fluid(maxWidth: 300) {
+                    ...GatsbySanityImageFluid
+                  }
+                }
               }
             }
           }
