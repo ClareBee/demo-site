@@ -3,11 +3,13 @@
 https://demo-site-for-build-plugins.netlify.app/
 or run locally with `npm run dev` on `localhost:8000`
 
-Building a simple Gatsby app against a **Sanity.io GraphQL API**, with **Netlify** incremental builds & plugins for **Cypress** & **A11y**.
+Building a simple Gatsby app against a **Sanity.io GraphQL API**, with **watch mode** for real-time updates in dev, **webhooks** to trigger builds on content change, **Netlify** incremental builds & plugins for **Cypress** & **A11y**.
 
 <p align="center">
 <img src="/assets/home.jpg" alt="home" />
 </p>
+
+---
 
 <p align="center">
 <img src="/assets/about.jpg" alt="about" width="330px" /> <br/>
