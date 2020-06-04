@@ -12,32 +12,8 @@ exports.createPages = async ({ graphql, actions }) => {
       allSanityMovie(filter: { slug: { current: { ne: null } } }) {
         edges {
           node {
-            title
             slug {
               current
-            }
-            releaseDate
-            _rawOverview
-            poster {
-              asset {
-                fluid {
-                  srcSet
-                  srcSetWebp
-                }
-              }
-            }
-            castMembers {
-              person {
-                name
-                image {
-                  asset {
-                    fluid {
-                      srcSet
-                      srcSetWebp
-                    }
-                  }
-                }
-              }
             }
           }
         }
@@ -53,7 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path,
       component: require.resolve("./src/templates/movie.js"),
-      context: { slug: edge.node.slug.current, ...edge.node },
+      context: { slug: edge.node.slug.current },
     })
   })
 }
