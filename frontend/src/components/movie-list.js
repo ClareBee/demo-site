@@ -13,7 +13,7 @@ const MovieList = ({ data }) => {
     <article>
       <ul className={styles.list}>
         {sortByTitle(data.allSanityMovie.edges).map(({ node }) => (
-          <MovieItem node={node} key={node.title} />
+          <MovieItem node={node} key={node._id} />
         ))}
       </ul>
     </article>

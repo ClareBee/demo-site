@@ -20,6 +20,10 @@ export const query = graphql`
     allSanityMovie {
       edges {
         node {
+          _id
+          slug {
+            current
+          }
           title
           releaseDate
           _rawOverview
@@ -32,6 +36,7 @@ export const query = graphql`
           }
           castMembers {
             person {
+              _id
               name
               image {
                 asset {
