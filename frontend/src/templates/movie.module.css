@@ -85,16 +85,6 @@
   border-radius: 5px;
 }
 
-@media only screen and (max-width: 1380px) {
-  /* .container {
-    flex-direction: column;
-  }
-  .image {
-    width: 100%;
-    margin-right: 0;
-  } */
-}
-
 @media only screen and (max-width: 799px) {
   .moviecontainer {
     flex-direction: column-reverse;
@@ -106,5 +96,8 @@
   .description,
   .cast {
     width: 90%;
+  }
+  .castRow {
+    font-size: 1rem;
   }
 }
