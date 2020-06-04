@@ -1,0 +1,110 @@
+.moviecontainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.poster {
+  width: 25%;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+}
+
+.poster img {
+  border-radius: 5px;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+}
+
+.description {
+  width: 65%;
+  padding: 1rem 0.75rem;
+  background: #fff;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+  line-height: 1.5;
+}
+
+.crew {
+  list-style: none;
+  font-family: Rubik, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.crew li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crew li span:first-of-type {
+  font-weight: bold;
+  color: #2a2a72;
+}
+
+.castSection {
+  margin-top: 2.5rem;
+}
+
+.cast {
+  list-style: none;
+  margin-top: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1.5rem;
+}
+
+.castRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #acb2c3;
+}
+
+.actor {
+  display: flex;
+  width: 60%;
+}
+
+.actorName {
+  margin-left: 1rem;
+}
+
+.actorImage {
+  width: 20%;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+}
+
+.actorImage img {
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1380px) {
+  /* .container {
+    flex-direction: column;
+  }
+  .image {
+    width: 100%;
+    margin-right: 0;
+  } */
+}
+
+@media only screen and (max-width: 799px) {
+  .moviecontainer {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .poster,
+  .description,
+  .cast {
+    width: 90%;
+  }
+}

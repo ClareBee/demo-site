@@ -631,6 +631,12 @@ p,
 a {
   color: #1d1e2c;
 }
+
+hr {
+  background: #ff0022;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+}
+
 .container {
   margin: 0 auto;
   display: flex;
