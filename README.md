@@ -6,14 +6,16 @@ or run locally with `npm run dev` on `localhost:8000`
 Building a simple Gatsby app against a **Sanity.io GraphQL API**, with **Netlify** incremental builds & plugins for **Cypress** & **A11y**.
 
 <p align="center">
-<img src="/assets/home.jpg" alt="home" width="330px" />
-
-<img src="/assets/about.jpg" alt="about" width="330px" />
+<img src="/assets/home.jpg" alt="home" />
 </p>
 
-<img src="/assets/show1.jpg" alt="show page" width="330px" />
-
+<p align="center">
+<img src="/assets/about.jpg" alt="about" width="330px" /> <br/>
+<img src="/assets/show1.jpg" alt="show page" width="330px" /><br/>
 <img src="/assets/show2.jpg" alt="show page" width="330px" />
+</p>
+
+
 
 ### Additional Features
 
