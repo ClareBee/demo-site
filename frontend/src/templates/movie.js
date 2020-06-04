@@ -5,39 +5,36 @@ import styles from "./movie.module.css"
 
 export const query = graphql`
   query movie($slug: String!) {
-    allSanityMovie(filter: { slug: { current: { eq: $slug } } }) {
-      edges {
-        node {
-          title
-          _rawOverview
-          releaseDate
-          poster {
+    sanityMovie(slug: { current: { eq: $slug } }) {
+      title
+      _rawOverview
+      releaseDate
+      poster {
+        asset {
+          fluid(maxWidth: 400) {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
+      castMembers {
+        characterName
+        person {
+          _id
+          name
+          image {
             asset {
-              fluid(maxWidth: 400) {
+              fluid(maxWidth: 300) {
                 ...GatsbySanityImageFluid
               }
             }
           }
-          castMembers {
-            characterName
-            person {
-              _id
-              name
-              image {
-                asset {
-                  fluid(maxWidth: 300) {
-                    ...GatsbySanityImageFluid
-                  }
-                }
-              }
-            }
-          }
-          crewMembers {
-            job
-            person {
-              name
-            }
-          }
+        }
+      }
+      crewMembers {
+        job
+        person {
+          _id
+          name
         }
       }
     }
@@ -45,7 +42,6 @@ export const query = graphql`
 `
 
 const Movie = data => {
-  console.log(data)
   const {
     title,
     _rawOverview: description,
@@ -53,7 +49,7 @@ const Movie = data => {
     castMembers,
     poster,
     crewMembers,
-  } = data.data.allSanityMovie.edges[0].node
+  } = data.data.sanityMovie
   return (
     <Layout>
       <h1>{title}</h1>
@@ -65,7 +61,7 @@ const Movie = data => {
           <p>{description[0].children[0].text}</p>
           <ul className={styles.crew}>
             {crewMembers.map(member => (
-              <li>
+              <li key={member.person._id}>
                 <span>{member.job}</span>
 
                 <span>{member.person.name}</span>
