@@ -17,8 +17,6 @@ Building a simple Gatsby app against a **Sanity.io GraphQL API**, with **watch m
 <img src="/assets/show2.jpg" alt="show page" width="330px" />
 </p>
 
-
-
 ### Additional Features
 
 - CSS Modules
@@ -118,17 +116,21 @@ package = "netlify-plugin-gatsby-cache"
 - deploy Gatsby site to Netlify using GitHub (master branch default) - remembering to change the publish directory to the frontend/public one rather than the default public
 - adjust build script: `"build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages"`
 
+- Now any changes to your source data (here in Sanity) will trigger a build where Gatsby will only rebuild affected pages! => Gatsby Incremental Builds!
+
+  ![netlify build](/assets/netlifybuild.jpg)
+
+### Plugins
+
 - add Plugins: https://docs.netlify.com/configure-builds/build-plugins/
   ![netlify plugins](/assets/plugin-directory.jpg)
-
-- Now any changes to your source data (here in Sanity) will trigger a build where Gatsby will only rebuild affected pages! => Incremental Builds!
-
-  ![netlify build](/assets/netlifyincrementalbuild.jpg)
 
 - e.g. Cypress Netlify Plugin: https://github.com/cypress-io/netlify-plugin-cypress#readme
 - add to Gatsby: `yarn add -D netlify-plugin-cypress` & update the netlify.toml
 
 > How does it work? When Netlify Build runs, it "knows" the output folder name and calls the netlify-plugin-cypress after the build has finished with that folder. Then the plugin runs Cypress tests using its NPM module API. If the tests pass, the plugin finishes and the Netlify deploy starts.
+
+![cypress plugin](/assets/cypress.jpg)
 
 - e.g. https://github.com/netlify-labs/netlify-plugin-a11y
 - `yarn add netlify-plugin-a11y`
