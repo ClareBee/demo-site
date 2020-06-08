@@ -1,6 +1,6 @@
   
 [build]
-  base = "frontend/"
+  base = "frontend"
   command = "npm run build"
   publish = "public"
 [[plugins]]
@@ -14,7 +14,7 @@ package = "netlify-plugin-a11y"
   [plugins.inputs]
   
   # required config
-  checkPaths = ['/frontend/public']
+  checkPaths = ['/public']
 
   # # optional config
   # ignoreDirectories = ['/admin']  # explicitly ignore these directories
