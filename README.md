@@ -118,8 +118,6 @@ package = "netlify-plugin-gatsby-cache"
 
 - Now any changes to your source data (here in Sanity) will trigger a build where Gatsby will only rebuild affected pages! => Gatsby Incremental Builds!
 
-  ![netlify build](/assets/netlifybuild.jpg)
-
 ### Plugins
 
 - add Plugins: https://docs.netlify.com/configure-builds/build-plugins/
@@ -160,6 +158,8 @@ package = "netlify-plugin-a11y"
   # # Developer only
   # debugMode = true # extra logging for plugin developers
 ```
+
+![netlify build](/assets/netlifybuild.jpg)
 
 ### Troubleshooting
 
