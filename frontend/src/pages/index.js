@@ -5,15 +5,12 @@ import Layout from "../components/layout"
 import MovieList from "../components/movie-list"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => {
-  console.log(data)
-  return (
-    <Layout>
-      <SEO title="Home" />
-      <MovieList data={data} />
-    </Layout>
-  )
-}
+const IndexPage = ({ data }) => (
+  <Layout>
+    <SEO title="Home" />
+    <MovieList data={data} />
+  </Layout>
+)
 
 export const query = graphql`
   query {
